@@ -1,0 +1,23 @@
+{
+  "name": "Node.js & AWS Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1",
+  
+  // Installs the AWS CLI automatically when the container builds
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
+  },
+
+  // Useful VS Code extensions for your stack
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "AmazonWebServices.aws-toolkit-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+
+  // Automatically install dependencies if a package.json exists later
+  "postCreateCommand": "npm install"
+}
